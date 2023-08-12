@@ -1,3 +1,6 @@
+/* External Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 /* General Styles */
 * {
     box-sizing: border-box;
@@ -5,17 +8,18 @@
     padding: 0;
 }
 
-/* Tag Styles */
+/* Header Styles */
 header {
-    margin: 20px 50px;
+    margin: 20px 100px;
 }
 
 h1, nav {
     display: inline-block;
+    cursor: pointer;
 }
 
 nav {
-    margin-left: 1000px;
+    float: right;
 }
 
 nav li {
@@ -24,6 +28,21 @@ nav li {
     font-size: 1.2rem;
 }
 
+nav li:hover {
+    cursor: pointer;
+}
+
+/* Body Styles */
+body {
+    background-color: pink;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+/* Main Styles */
+main {
+    display: grid;
+    margin: 20px 100px;
+}
 
 
 @media only screen and (max-width: 480px)  {
