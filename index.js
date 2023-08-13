@@ -4,7 +4,7 @@ const heading = document.querySelector('h1');
 
 let originalColor = getComputedStyle(body).backgroundColor;
 
-heading.addEventListener('click', changeBodyColor);
+heading.addEventListener('click', );
 
 function changeBodyColor() {
     if (body.style.backgroundColor === originalColor) {
