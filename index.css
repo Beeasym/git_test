@@ -104,6 +104,7 @@ main {
     border-radius: 10px;
     background-color: #C8C5DE;
     transition: all 0.5s ease-out;
+    text-decoration: none;
 }
 
 .item:hover {
@@ -112,11 +113,10 @@ main {
     box-shadow: 5px 5px 1px black;
 }
 
-.item a {
+.link_content {
     margin: auto;
     font-size: 1.5rem;
     cursor: pointer;
-    text-decoration: none;
     border-radius: 10px;
     background-color: whitesmoke;
     padding: 10px 10px;
@@ -124,7 +124,7 @@ main {
     transition: all 0.5s ease-out;
 }
 
-.item a:hover {
+.link_content:hover {
     color: white;
     background-color: black;
     padding: 15px 15px;
