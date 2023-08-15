@@ -188,7 +188,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1184px) {
     .my_content {
         grid-template-columns: repeat(3, 250px);
         grid-template-rows: repeat(2, 250px);
@@ -212,8 +212,9 @@ main {
         flex-direction: column;
         margin-left: 10px;
     }
-    .burger img {
+    .burger_icon {
         cursor: pointer;
+        transition: all 0.2s ease;
     }
     .menu {
         display: none;

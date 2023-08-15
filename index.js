@@ -1,16 +1,45 @@
-const burgerButton = document.querySelector(".burger");
+const body = document.querySelector("body");
 
-const burgerItems = document.querySelector(".menu");
+const burgerIcon = document.querySelector(".burger_icon");
 
-burgerButton.addEventListener("click", clickBurger)
+const burgerMenu = document.querySelector(".menu");
+
+let burgerOriginalColor = getComputedStyle(burgerIcon).backgroundColor;
+
+burgerIcon.addEventListener("click", clickBurger);
+
+burgerIcon.addEventListener("click", burgerLights);
+
+document.addEventListener("click", clickBody);
+    
+//body.addEventListener("click", clickBody)
 
 function clickBurger() {
     
-    burgerItems.classList.toggle("open");
+    burgerMenu.classList.toggle("open");
     
-    if (burgerItems.style.display === "block") {
-        burgerItems.style.display = "none";
+    if (burgerMenu.style.display === "block") {
+        burgerMenu.style.display = "none";
     } else {
-        burgerItems.style.display = "block";
+        burgerMenu.style.display = "block";
+    }
+}
+
+function burgerLights() {
+    
+    if (burgerMenu.style.display === "block") {
+        burgerIcon.style.backgroundColor = "#E3FFF0";
+        burgerIcon.style.borderRadius = "10px";
+    } else {
+        burgerIcon.style.backgroundColor = burgerOriginalColor;
+    }
+    
+}
+function clickBody(e) {
+
+    if (!burgerMenu.contains(e.target) && !burgerIcon.contains(e.target)) {
+        burgerMenu.classList.remove("open");
+        burgerMenu.style.display = "none";
+        burgerIcon.style.backgroundColor = burgerOriginalColor;
     }
 }
